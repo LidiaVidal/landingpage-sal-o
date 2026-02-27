@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN para visualização rápida -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cor01: '#bf6986', // Rosa escuro
+                        cor02: '#fef1f5', // Rosa clarinho (Fundo)
+                        cor03: '#1B170C', // Quase preto (Texto)
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Florecer studio</title>
+</head>
+<body class="bg-cor02 font-fontFamily">
+    <header class=" bg-cor02/90 fixed w-full z-50 shadow-sm">
+        <div class="relative flex flex-row justify-between items-center w-full h-24 px-8 gap-8">
+            <button id="burguer" aria-label="Abrir menu" class="z-10 hover:text-cor01">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="absolute left-1/2 -translate-x-1/2 ml-18 font-extrabold whitespace-nowrap gap-2 items-center text-cor01 flex">
+                <i class="fa-solid fa-spa" id="nav-logo"></i>
+                <span>Florecer Studio</span>
+            </div>
+            <button class="z-10 px-5 py-2.5 bg-cor01 text-sm text-white rounded-xl hover:bg-[#a85974] shadow-sm flex items-center gap-2">
+                <i class="fa-regular fa-calendar"></i>
+            </button>
+        </div>
+
+         <menu id="menu" class="hidden bg-cor02/90">
+            <ul class="text-center">
+                <li class="bg-white p-2 m-2 mx-4 rounded-lg hover:bg-cor01 transition-all duration-300">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="bg-white p-2 m-2 mx-4 rounded-lg hover:bg-cor01 transition-all duration-300">
+                    <a href="#servico">Serviços</a>
+                </li>
+                <li class="bg-white p-2 m-2 mx-4 rounded-lg hover:bg-cor01 transition-all duration-300">
+                    <a href="#">Depoimentos</a>
+                </li>
+            </ul>
+        </menu>
+  
+    </header>
+
+    <main class="text-cor03">
+        <section id="home">
+    
+            <div id="banner" class="flex justify-center ">
+                <img src="../image/banner.jpg" alt="Interior aconchegante do Florecer Studio" class="w-[90vw] max-w-4xl rounded-xl mt-36 mb-8 shadow-xl">
+            </div>
+
+            <div id="cta" class="text-center">
+                <span class="p-2 bg-cor01/10 rounded-3xl text-cor01 font-extrabold">RENOVE SUA AUTOESTIMA</span>
+
+                <h1 class="mt-8 mb-2 text-3xl font-bold">
+                    Sua beleza é única!
+                </h1>
+
+                <p class="text-cor01 text-4xl font-bold">O nosso cuidado também.</p>    
+                
+                <p class="m-8 text-base">
+                   Descubra um espaço dedicado ao seu bem-estar. <br> Oferecemos tratamentos personalizados para realçar <br>o que você tem de melhor.
+                </p>
+                
+                <div class="flex flex-row justify-center gap-8">
+                    <button class="p-4 bg-cor01 rounded-lg text-white font-medium transition-all duration-300 hover:-translate-y-1 hover:bg-[#a85974] hover:shadow-xl">
+                        Agendar Agora
+                    </button>
+                    <button class="p-4 bg-white rounded-lg hover:text-cor01 hover:border-cor01-100">
+                        Ver serviços
+                    </button> <!--Border-->
+                </div>
+            </div>
+
+        </section>
+
+        <section id="servico" class="flex flex-col items-center mt-20">
+            <h2 class="font-semibold text-2xl">Nossos serviços</h2>
+            <span class="bg-var01 w-24"></span> <!--Border top-->
+            <div class="card_container">
+                <article>
+                    <h3>Corte & Styling</h3>
+                    <p>Cortes personalizados que valorizam o formato do seu rosto e expressam sua personalidade.</p>
+                </article>
+                <article>
+                    <h3>Coloração</h3>
+                    <p>Técnicas modernas de mechas, luzes e coloração global com produtos de alta performance.</p>
+                </article>
+                <article>
+                    <h3>Tratamentos</h3>
+                    <p>Cronograma capilar, hidratação profunda e reconstrução para a saúde dos fios.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
